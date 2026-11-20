@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nocturna: El despertar del eclipse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="#top">NOCTURNA</a>
+<ul><li><a href="#linajes">Linajes</a></li><li><a href="#ciclo">Ciclo</a></li><li><a href="#eventos">Eventos</a></li><li><a href="#guayagod">Guayagod</a></li><li><a href="#evolucion">Evolución</a></li><li><a href="#afd">AFD</a></li></ul>
+<a class="btn ghost" href="https://github.com/Zedardoc/Nocturna" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.93-.89-1.18-.89-1.18-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.67.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.19c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div class="eclipse" aria-hidden="true"></div>
+<h1>NOCTURNA</h1>
+<div class="sub">El despertar del eclipse</div>
+<p class="d">Un ecosistema sobrenatural en 2D donde vampiros, hombres lobo y zombis sobreviven solos, sin control manual. Cada criatura decide por sí misma gracias a un autómata finito determinista.</p>
+<div class="cta">
+<a class="btn main" href="https://github.com/Zedardoc/Nocturna" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.93-.89-1.18-.89-1.18-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.67.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.19c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Ver el código en GitHub</a>
+<a class="btn ghost" href="#linajes">Conocer los linajes</a>
+</div>
+<div class="chips"><span class="chip">Python</span><span class="chip">Google Colab</span><span class="chip">Autómatas Finitos Deterministas</span><span class="chip">Simulación 2D</span></div>
+</div></header>
+
+<section id="linajes"><div class="wrap">
+<h2>Tres linajes, un mundo</h2>
+<p class="lead">No hay habilidades especiales. Lo que separa a un linaje de otro son sus atributos, su alimentación, sus vulnerabilidades y su comportamiento.</p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="panel" id="panel" role="tabpanel"></div>
+</div></section>
+
+<section id="ciclo"><div class="wrap">
+<h2>Día, atardecer y noche</h2>
+<p class="lead">Cada vuelta del mundo dura 12 ciclos. Toca un ciclo para ver cómo cambia el comportamiento de los linajes.</p>
+<div class="cycle" id="cycle"></div>
+<div class="card" id="cinfo" aria-live="polite"></div>
+</div></section>
+
+<section id="eventos"><div class="wrap">
+<h2>Eventos que alteran el mundo</h2>
+<p class="lead">Aparecen al azar y favorecen a un linaje a costa de los demás.</p>
+<div class="grid">
+<div class="card"><h3>Eclipse</h3><p>Los vampiros no reciben daño solar y pueden moverse a plena luz del día.</p><span class="tag">Favorece a vampiros · 4 ciclos</span></div>
+<div class="card"><h3>Luna de sangre</h3><p>Los hombres lobo en forma bestial ganan +5 de ataque y +2 de defensa.</p><span class="tag">Favorece a hombres lobo · 4 ciclos</span></div>
+<div class="card"><h3>Lluvia corrupta</h3><p>Contamina una zona de 3×3. Los zombis recuperan 5 de salud por ciclo allí; los demás pierden 5.</p><span class="tag">Favorece a zombis · 4 ciclos</span></div>
+<div class="card"><h3>Incendio</h3><p>Quema una zona de 3×3, destruye recursos y daña construcciones: 12 por ciclo a vampiros y lobos, 18 a zombis.</p><span class="tag">Perjudica a todos · 3 ciclos</span></div>
+</div>
+</div></section>
+
+<section id="guayagod"><div class="wrap">
+<div class="dragon">
+<div>
+<h2>Guayagod, el dragón</h2>
+<p style="color:var(--mute);margin:0 0 1rem">Aparece sin aviso y ataca criaturas y construcciones. Pero también hace pactos: elige un linaje, le exige un tributo de 3 unidades de alimento y lo protege mientras dure el evento.</p>
+<p style="color:var(--mute);margin:0">Durante un eclipse protege a los vampiros, en una luna de sangre a los hombres lobo y en una lluvia corrupta a los zombis.</p>
+</div>
+<div>
+<blockquote>Guayagod ha reconocido la fortaleza del linaje de [nombre] y ha decidido protegerlo.</blockquote>
+<p style="color:var(--mute);font-size:.95rem;margin:1rem 0 0">Sin evento especial, elige al linaje con mayor poder: el promedio de Salud + 2×Ataque + 2×Defensa de sus individuos vivos.</p>
+</div>
+</div>
+</div></section>
+
+<section id="evolucion"><div class="wrap">
+<h2>Evolución</h2>
+<p class="lead">Tres etapas por linaje y una rama alternativa al final. Se evoluciona con 20 XP (etapa I → II) y 50 XP (II → III). Cada paso suma +15 de salud máxima, +2 de ataque y +1 de defensa.</p>
+<div class="scroll"><table>
+<thead><tr><th>Linaje</th><th>Etapa I</th><th>Etapa II</th><th>Etapa III</th><th>Rama alternativa</th></tr></thead>
+<tbody>
+<tr><td>Vampiros</td><td>Nocturno</td><td>Sanguinario</td><td>Señor Carmesí</td><td>Vampiro Solar</td></tr>
+<tr><td>Hombres lobo</td><td>Cachorro Feral</td><td>Licántropo</td><td>Alfa Lunar</td><td>Bestia Salvaje</td></tr>
+<tr><td>Zombis</td><td>Errante</td><td>Devorador</td><td>Coloso Pútrido</td><td>Portador de la Plaga</td></tr>
+</tbody></table></div>
+<div class="grid" style="margin-top:1.4rem">
+<div class="card"><h3>Vampiro Solar</h3><p>Sobrevive tres ciclos diurnos fuera del refugio. Su daño solar baja de 8 a 2.</p></div>
+<div class="card"><h3>Bestia Salvaje</h3><p>Pasa tres ciclos en bosque contaminado y elimina un zombi. Gana +3 de ataque y +2 de defensa allí.</p></div>
+<div class="card"><h3>Portador de la Plaga</h3><p>Visita tres casillas contaminadas y sobrevive al fuego. Gana +2 de defensa y +5 de salud en zonas contaminadas.</p></div>
+</div>
+</div></section>
+
+<section id="aldeas"><div class="wrap">
+<h2>Aldeas y refugios</h2>
+<p class="lead">Cada linaje parte de una aldea que puede mejorarse y también caer.</p>
+<div class="grid">
+<div class="card"><h3>Aldea inicial</h3><p>Resistencia 100. Aloja hasta 10 criaturas.</p></div>
+<div class="card"><h3>Aldea fortificada</h3><p>Resistencia 150. Aloja hasta 15. Pide 5 individuos vivos, 10 de alimento y 10 de materiales.</p></div>
+<div class="card"><h3>Gran aldea</h3><p>Resistencia 200. Aloja hasta 20. Pide 8 individuos vivos, 20 de alimento y 20 de materiales.</p></div>
+<div class="card"><h3>Refugio provisional</h3><p>Si la aldea cae, se levanta un refugio de resistencia 50 para 5 criaturas. Con el tiempo se transforma de nuevo en aldea.</p></div>
+</div>
+</div></section>
+
+<section id="afd"><div class="wrap">
+<h2>El cerebro: un AFD</h2>
+<p class="lead">Cada criatura tiene un estado y, para cada entrada, una única transición posible. Cuando varias necesidades chocan, gana la de mayor prioridad.</p>
+<ol class="pri">
+<li>Muerto</li><li>Peligro ambiental inmediato</li><li>Envenenamiento</li><li>Buscar refugio</li><li>Amenaza enemiga</li><li>Hambre</li><li>Energía baja</li><li>Recolección y construcción</li><li>Exploración</li>
+</ol>
+<div class="states"><span>EXPLORAR</span><span>BUSCAR_ALIMENTO</span><span>ALIMENTARSE</span><span>DESCANSAR</span><span>PERSEGUIR</span><span>ATACAR</span><span>HUIR</span><span>BUSCAR_REFUGIO</span><span>BUSCAR_CURA</span><span>RECOLECTAR</span><span>CONSTRUIR</span><span>MUERTO</span></div>
+</div>
+<div class="wrap"><div class="divider"></div></div></section>
+
+<footer><div class="wrap">
+<div class="big">La noche no espera.</div>
+<a class="btn main" href="https://github.com/Zedardoc/Nocturna" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.93-.89-1.18-.89-1.18-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.67.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.19c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>github.com/Zedardoc/Nocturna</a>
+<small>Nocturna: El despertar del eclipse · Simulador en Python</small>
+</div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
